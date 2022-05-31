@@ -29,7 +29,7 @@
 		echo "<tr><th>Dateiname</th><td>" . $row['filename'] ."</td></tr>";
 		echo "<tr><th>Trackpoints</th><td>" . $row['trkpt_count'] ."</td></tr>";
 		echo "<tr><th>Entfernung</th><td>" . round($row['distance'],3) ." km</td></tr>";
-		echo "<tr><th>Datum</th><td>" . round($row['trk_date'],3) ." </td></tr>";
+		echo "<tr><th>Datum</th><td>" . $row['trk_date'] ." </td></tr>";
 		echo "</table>\n";
 		echo "<br>";
 		$strPath=$strUploaddir.$row['filename'];
