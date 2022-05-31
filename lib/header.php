@@ -15,8 +15,12 @@
   <title>GPX-Trackverwaltung</title>
 
   <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <script src="js/leaflet.js"></script>
+  <script src="leaflet/leaflet.js"></script>
   <style>
     .mytable {max-width: 45em;}
     .mytable tr > *:nth-child(1) { width:3em; }
@@ -28,19 +32,23 @@
     a:link, a:visited {color:darkred;}
     a.btn:visited  {color:white;}
     a.btn:link  {color:white;}
+
+    
   </style>
 </head>
 <body>
 
   <!--  Navbar -->
   <header>
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" role="navigation">
+      <div class="container-fluid">
         <a class="navbar-brand" href="index.php">GPX-Trackverwaltung</a>
-        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler d-lg-nonenavbar-toggler collapsed flex-column justify-content-around" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
-      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+
+      <div class="collapse navbar-collapse" id="navbarsDefault">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
               <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
@@ -64,13 +72,16 @@
         if ($boolLogin) echo "<li class='nav-item'><a class='nav-link'>(".$strName.")</a></li>";
 ?>
           </ul>
-
+<!--
           <form class="form-inline mt-2 mt-md-0">
             <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
           </form>
+-->          
+        </div>
         </div>
       </nav>
+
     </header>
 
      <nav>

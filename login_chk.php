@@ -5,7 +5,7 @@
   $strPassword = $_POST['password'];
 
   $strSql = "select * from user where password=CONCAT('*', UPPER(SHA1(UNHEX(SHA1('$strPassword'))))) AND login='$strLogin'";
-  echo $strSql;
+
 
   $stmt=$pdo->query($strSql);
   if ($row=$stmt->fetch(PDO::FETCH_ASSOC)) {
